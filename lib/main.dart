@@ -34,14 +34,14 @@ class _HomeScreenState extends State<HomeScreen> {
   bool _isBalanceVisible = true;
 
   final List<Map<String, dynamic>> mainMenus = [
-    {"icon": Icons.send, "label": "Transfer", "color": Colors.blue},
-    {"icon": Icons.bolt, "label": "Top Up", "color": Colors.green},
-    {"icon": Icons.receipt, "label": "Tagihan", "color": Colors.orange},
-    {"icon": Icons.qr_code_scanner, "label": "QRIS", "color": Colors.purple},
-    {"icon": Icons.shopping_cart, "label": "e-Commerce", "color": Colors.red},
-    {"icon": Icons.attach_money, "label": "Investasi", "color": Colors.teal},
-    {"icon": Icons.card_giftcard, "label": "e-Money", "color": Colors.pink},
-    {"icon": Icons.more_horiz, "label": "Lainnya", "color": Colors.grey},
+  {"icon": Icons.send, "label": "Transfer", "color": const Color(0xFF003C8F)},
+  {"icon": Icons.bolt, "label": "Top Up", "color": const Color(0xFF003C8F)},
+  {"icon": Icons.receipt, "label": "Tagihan", "color": const Color(0xFF003C8F)},
+  {"icon": Icons.qr_code_scanner, "label": "QRIS", "color": const Color(0xFF003C8F)},
+  {"icon": Icons.credit_card, "label": "e-Money", "color": const Color(0xFF003C8F)},
+  {"icon": Icons.trending_up, "label": "Investasi", "color": const Color(0xFF003C8F)},
+  {"icon": Icons.card_giftcard, "label": "Promo", "color": const Color(0xFF003C8F)},
+  {"icon": Icons.more_horiz, "label": "Lainnya", "color": const Color(0xFF003C8F)},
   ];
 
   final List<Map<String, dynamic>> promos = [
@@ -60,7 +60,7 @@ class _HomeScreenState extends State<HomeScreen> {
           padding: const EdgeInsets.all(8.0),
           child: Container(
             decoration: BoxDecoration(
-              color: const Color(0xFF0066CC),
+              color: const Color(0xFF003C8F),
               borderRadius: BorderRadius.circular(12),
             ),
             child: const Icon(Icons.account_balance, color: Colors.white, size: 28),
@@ -139,7 +139,7 @@ class _HomeScreenState extends State<HomeScreen> {
           }
         },
         type: BottomNavigationBarType.fixed,
-        selectedItemColor: const Color(0xFF0066CC),
+        selectedItemColor: const Color(0xFF003C8F),
         unselectedItemColor: Colors.grey,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Beranda'),
@@ -163,7 +163,7 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Container(
         decoration: BoxDecoration(
           gradient: const LinearGradient(
-            colors: [Color(0xFF0066CC), Color(0xFF004C99)],
+            colors: [Color(0xFF003C8F), Color(0xFF004C99)],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           ),
@@ -189,7 +189,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       Text('Total Saldo', style: TextStyle(color: Colors.white70, fontSize: 14)),
                       SizedBox(height: 8),
                       Text(
-                        'Rp 12.500.000',
+                        'Rp 4.800.000',
                         style: TextStyle(color: Colors.white, fontSize: 28, fontWeight: FontWeight.bold),
                       ),
                     ],
@@ -211,8 +211,8 @@ class _HomeScreenState extends State<HomeScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  _buildBalanceDetail('Tabungan', 'Rp 8.200.000'),
-                  _buildBalanceDetail('Giro', 'Rp 4.300.000'),
+                  _buildBalanceDetail('Tabungan', 'Rp 2.400.000'),
+                  _buildBalanceDetail('Giro', 'Rp 2.400.000'),
                   _buildBalanceDetail('Deposito', 'Rp 5.000.000'),
                 ],
               ),
@@ -224,7 +224,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.white,
-                        foregroundColor: const Color(0xFF0066CC),
+                        foregroundColor: const Color(0xFF003C8F),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(12),
                         ),
@@ -319,7 +319,7 @@ class _HomeScreenState extends State<HomeScreen> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text('Promo & Penawaran', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-              Text('Lihat semua', style: TextStyle(color: Color(0xFF0066CC), fontSize: 13, fontWeight: FontWeight.w500)),
+              Text('Lihat semua', style: TextStyle(color: Color(0xFF003C8F), fontSize: 13, fontWeight: FontWeight.w500)),
             ],
           ),
         ),
@@ -349,7 +349,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(12),
                       ),
-                      child: const Icon(Icons.local_offer, color: Color(0xFF0066CC), size: 28),
+                      child: const Icon(Icons.local_offer, color: Color(0xFF003C8F), size: 28),
                     ),
                     const SizedBox(width: 12),
                     Expanded(
@@ -482,7 +482,7 @@ class _HomeScreenState extends State<HomeScreen> {
       onTap: () {},
       child: Column(
         children: [
-          Icon(icon, color: const Color(0xFF0066CC), size: 28),
+          Icon(icon, color: const Color(0xFF003C8F), size: 28),
           const SizedBox(height: 4),
           Text(title, style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w500)),
           Text(subtitle, style: const TextStyle(fontSize: 10, color: Colors.black54)),
